@@ -3,6 +3,7 @@ package com.thoughtworks.collection;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class CollectionOperator {
@@ -40,19 +41,25 @@ public class CollectionOperator {
     }
 
     public List<Integer> popEvenElments(int[] array) {
-//        int[] array2=new int[array.length];
-//        for (int i=0,j=0;i<array.length;i++){
-//            if (array[i]%2==0){
-//                array2[j]=array[i];
-//                j++;
-//            }
-//        }
-//        return array2;
-        throw new NotImplementedException();
+        int[] array2=new int[array.length];
+        int j=0;
+        for (int i=0;i<array.length;i++){
+            if (array[i]%2==0){
+                array2[j]=array[i];
+                j++;
+            }
+        }
+        List<Integer> list=new ArrayList<>();
+        for(int k=0;k<j;k++){
+            list.add(array2[k]);
+        }
+        return list;
+
     }
 
     public int popLastElment(int[] array) {
-        throw new NotImplementedException();
+        return array[array.length-1];
+
     }
 
     public List<Integer> popCommonElement(int[] firstArray, int[] secondArray) {
